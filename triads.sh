@@ -1,20 +1,16 @@
 #!/bin/sh
 
-# Need this for sorting out progress through the practice routine.
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $SCRIPT_DIR/key_calendar.sh
+
+# Get today's key and related variables.
+STRING_SET=("6 to 4" "5 to 3" "4 to 2" "3 to 1")
+# Need this for sorting out progress through the practice routine.
 source $SCRIPT_DIR/wait_for_key_press.sh
 
 echo "Practice generator for getting a deeper understanding of triads."
 echo "Press [W] to continue through the exercises.\n"
 echo "--------------------------------------------------------------\n"
-
-KEYS=(G Eb B D Bb Gb A F Db E C Ab G Eb Cb D Bb F# A F C# E C Ab)
-CAGED=(C A G E D)
-STRING_SET=("6 to 4" "5 to 3" "4 to 2" "3 to 1")
-
-# Use date in YYYYMMDD format for starting point. 
-DATE_INT=$(date +%Y%m%d)
-START_INDEX=$((DATE_INT % ${#KEYS[@]}))
 
 echo "Today's Key is ${KEYS[$START_INDEX]}, in the CAGED position ${CAGED[DATE_INT % ${#CAGED[@]}]}."
 # echo "Play these inversions on strings ${STRING_SET[DATE_INT % ${#STRING_SET[@]}]}.\n"
