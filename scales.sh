@@ -26,9 +26,6 @@ echo
 wait_for_key_press "W" "[ ] Level 3: Take a short melody + chords behind it, learn it in all string groups, and cycle through every key."
 echo
 wait_for_key_press "W" "[ ] Level 4: Play through a backing track. https://www.youtube.com/playlist?list=PLvPS3L8EbAx9wEH5Nq_aU2J0Lm9TcCFYP."
-echo
-
-# IV not in chord progression, using it to embellish V. Eventually, can go beyond this to emphasise different modes, work through different chords, etc.
 echo "\n"
 wait_for_key_press "W" "🎉 Practice complete!! 🎉"
 echo
