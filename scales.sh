@@ -13,8 +13,9 @@ echo "--------------------------------------------------------------\n"
 
 echo "Today's Key is ${KEYS[$START_INDEX]}, in the CAGED position ${CAGED[DATE_INT % ${#CAGED[@]}]}.\n"
 
-# Going to add 1 bpm every day from today (17th August)
-start_date="20240817"  # Format: YYYYMMDD
+# Going to add 1 bpm every day from today (1st September)
+# TODO: Restart the date and have this exercise alternate between triplets, 16th notes and quintuplets without pause. Feel the beat!
+start_date="20240901"  # Format: YYYYMMDD
 days_since=$(( ($(date -j -f "%Y%m%d" "$(date +%Y%m%d)" +%s) - $(date -j -f "%Y%m%d" "$start_date" +%s)) / 86400 ))
 wait_for_key_press "W" "[ ] Level 1: For today's key + position, play continuous 3nps legato for 1 min on each string pair. 16th notes at $((60 + days_since)) BPM."
 echo

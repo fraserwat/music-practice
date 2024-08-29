@@ -4,6 +4,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $SCRIPT_DIR/key_calendar.sh
 
 # Get today's key and related variables.
+CHORD_PROG=("blues" "ii-V-I" "royal road" "I-V-vi-IV")
 STRING_SET=("6 to 4" "5 to 3" "4 to 2" "3 to 1")
 # Need this for sorting out progress through the practice routine.
 source $SCRIPT_DIR/wait_for_key_press.sh
@@ -23,15 +24,13 @@ for i in {0..23}; do
 done
 echo "\n"
 
-wait_for_key_press "W" "[ ] Level 1: For today's key, play through 1/4 note arpeggios over 12 bar blues chord changes."
+wait_for_key_press "W" "[ ] Level 1: Play arpeggios over a blues progression in ${KEYS[DATE_INT % ${#KEYS[@]}]}."
 echo
-wait_for_key_press "W" "[ ] Level 2: Improvise over 12 bar blues for today's key."
+wait_for_key_press "W" "[ ] Level 2: Improvise over a blues progression for today's key."
 echo
-wait_for_key_press "W" "[ ] Level 3: Take the order of keys above, starting from the lowest inversion on the string set, working up and down again."
+wait_for_key_press "W" "[ ] Level 3: In the keys above, play inversions up and down the string set. Major then minor at each."
 echo
-
-# IV not in chord progression, using it to embellish V. Eventually, can go beyond this to emphasise different modes, work through different chords, etc.
-wait_for_key_press "W" "[ ] Level 4: Take adjacent chords (e.g. V and IV) and play around with them on a loop. Just a ${KEYS[DATE_INT % ${#KEYS[@]}]}7 loop for now."
+wait_for_key_press "W" "[ ] Level 4: Comp over adjacent chords in ${KEYS[DATE_INT % ${#KEYS[@]}]} Major."
 echo "\n"
 wait_for_key_press "W" "🎉 Practice complete!! 🎉"
 echo
