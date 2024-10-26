@@ -8,7 +8,7 @@ source $SCRIPT_DIR/key_calendar.sh
 source $SCRIPT_DIR/wait_for_key_press.sh
 
 # Override the CAGED array from key_calendar.sh as I build up my knowledge
-CAGED=(E A G)
+CAGED=(A G E)
 
 starting_bpm=60
 start_date="20241026"
@@ -26,14 +26,14 @@ wait_for_key_press "W" "[ ] Notefinder: Start on today's key, find the notes abo
 echo
 wait_for_key_press "W" "[ ] Triads: In the keys above, play inversions up and down the string set. Major then minor at each."
 echo
-wait_for_key_press "W" "[ ] Arpeggios: One run up and down positions of ${TODAYS_KEY} Maj/Min to get used to CAGED shapes, playing with as little pressure as you can get away with."
+wait_for_key_press "W" "[ ] Arpeggios: CAGED sweeps up and down the neck in ${TODAYS_KEY} Maj/Min. Up one, down the next etc."
 echo
-wait_for_key_press "W" "[ ] Scales: Play ${TODAYS_KEY} Major in today's position. Try it in thirds, or starting on different strings. Only apply the absolute minimum amount of pressure!"
+wait_for_key_press "W" "[ ] Scales: Play ${TODAYS_KEY} Major in today's position. Try it in thirds, or starting on different strings."
 echo
-wait_for_key_press "W" "[ ] Technique: Work up and down todays key position and get a clear pinch harmonic in on each note from rest position."
+wait_for_key_press "W" "[ ] Technique: Work through todays key position and get a clear pinch harmonic in on each note from rest position."
 echo
 wait_for_key_press "W" "[ ] Legato: Go up and down ${TODAYS_KEY} ${TODAYS_MODE} in different subdivisions at $((starting_bpm + days_since)) BPM along with a drum track."
 echo
-wait_for_key_press "W" "[ ] Improv: Over a V7alt → imin cadance vamp, mess around with the diminished triad resolving to a chord tone. Then mess with minor scale."
+wait_for_key_press "W" "[ ] Improv: Over a V7alt → imin cadance vamp, Play a diminished triad resolving to the minor scale."
 
 echo "\n\n🎉 Practice complete!! 🎉\n\nNow go play and write songs!\n"
